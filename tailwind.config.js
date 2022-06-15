@@ -10,7 +10,7 @@ module.exports = {
     extend: {
       colors: {
         brandGrey: "#F9F9F9",
-        minBlack: "#030303",
+        minBlack: "#131419",
       },
     },
   },

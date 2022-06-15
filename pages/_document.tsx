@@ -5,7 +5,7 @@ export default function Document() {
       //enables dark mode for entore application
     <Html> 
       <Head />
-      <body>
+      <body className="bg-white dark:bg-minBlack text-white dark:text-minBlack">
         <Main />
         <NextScript />
       </body>

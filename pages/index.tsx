@@ -20,7 +20,7 @@ const Home: NextPage = () => {
     if (currentTheme === "dark") {
       return (
         <button
-          className="w-10 h-10 text-yellow-500 "
+          className="w-10 h-10  text-black dark:text-white"
           role="button"
           onClick={() => setTheme("light")}
         >
@@ -31,7 +31,7 @@ const Home: NextPage = () => {
     } else {
       return (
         <button
-          className="w-10 h-10 text-gray-900 "
+          className="w-10 h-10  text-black dark:text-white "
           role="button"
           onClick={() => setTheme("dark")}
         >
@@ -49,7 +49,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center dark:bg-black bg-white">
+      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center  text-black dark:text-white">
         <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
           toggle
         </button>
