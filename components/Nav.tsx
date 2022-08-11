@@ -3,9 +3,9 @@ import * as React from "react";
 
 const NavBar = () => {
     return (
-        <div>
+        <nav className="fixed bg">
 
-        </div>
+        </nav>
     )
 }
 
