@@ -14,6 +14,9 @@ module.exports = {
         minlightBlack: "#0e0e13"
       },
     },
+    fontFamily: {
+      cabinet: ['Cabinet Grotesk', 'sans-serif']
+    }
   },
   plugins: [require('@tailwindcss/typography')],
 };
