@@ -49,16 +49,18 @@ const Home: NextPage = () => {
         <title>Portfolio Home Page </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NavBar />
+      <div className="min-container">
+        <NavBar />
 
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center  text-black dark:text-white">
-        <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-          toggle
-        </button>
-
-      </main>
-
-     
+        <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center  text-black dark:text-white">
+          <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+            toggle
+          </button>
+          <div>
+            kfdjnds jksnisdjk ijsknsd kjnsd 
+          </div>
+        </main>
+      </div>
     </div>
   );
 };

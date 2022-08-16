@@ -11,7 +11,7 @@ module.exports = {
       colors: {
         brandGrey: "#F9F9F9",
         minBlack: "#131419",
-        minlightBlack: "#0e0e13"
+        minLightBlack: "#575757"
       },
     },
     fontFamily: {
