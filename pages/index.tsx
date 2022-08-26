@@ -3,6 +3,9 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import { Responsive, WidthProvider } from "react-grid-layout"
+
+
 import NavBar from "../components/Nav";
 
 const Home: NextPage = () => {

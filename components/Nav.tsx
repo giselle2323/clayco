@@ -2,7 +2,7 @@ import * as React from "react";
 
 const NavBar = () => {
   return (
-    <nav className="p-6 w-full flex items-center mb-11">
+    <nav className="p-6 flex items-center mb-11">
       <svg
         width="123"
         height="28"
@@ -30,11 +30,12 @@ const NavBar = () => {
           </linearGradient>
         </defs>
       </svg>
-      <div className="dark:bg-minLightBlack justify-self-center ">
-        <ul className="flex items-center no-underline">
-          <li className="text-white bg-minBlack rounded-[30px]">Home</li>
-          <li>Work</li>
-          <li>About</li>
+      <div className="bg-white dark:bg-minLightBlack/30 mx-auto rounded-[50px] p-[18px]">
+        <ul className="flex items-center no-underline gap-6">
+          <li className="text-black dark:text-white hover:dark:bg-minBlack hover:bg-minLightBlack/30 rounded-[30px] py-[5px] px-4">Home</li>
+          <li className="text-black dark:text-white hover:dark:bg-minBlack hover:bg-minLightBlack/30 rounded-[30px] py-[5px] px-4">Work</li>
+          <li className="text-black dark:text-white hover:dark:bg-minBlack hover:bg-minLightBlack/30 rounded-[30px] py-[5px] px-4">About</li>
+          <li className="text-black dark:text-white hover:dark:bg-minBlack hover:bg-minLightBlack/30 rounded-[30px] py-[5px] px-4">Contact</li>
         </ul>
       </div>
     </nav>
