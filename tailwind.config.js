@@ -12,6 +12,7 @@ module.exports = {
         brandGrey: "#F9F9F9",
         minBlack: "#131419",
         minLightBlack: "#575757",
+        // minLightBlack: "#101010",
         offWhite: "#f5f5f5"
       },
     },
