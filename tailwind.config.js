@@ -11,9 +11,9 @@ module.exports = {
       colors: {
         brandGrey: "#F9F9F9",
         minBlack: "#131419",
-        minLightBlack: "#575757",
+        minLightBlack: "#292929",
         // minLightBlack: "#101010",
-        offWhite: "#f5f5f5"
+        offWhite: "#f7f2f2"
       },
     },
     fontFamily: {

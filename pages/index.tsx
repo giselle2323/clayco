@@ -7,6 +7,8 @@ import { Responsive, WidthProvider } from "react-grid-layout";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import Memoji from "../public/images/memoji-1.png";
 import Asoebi from "../public/images/asoebi-frame.png";
+import Airplay from "../public/images/airplay-frame.png";
+import Minlinks from "../public/images/minlinks-frame.png";
 import Moscolino from "../public/images/moscolino-frame.png";
 import Webscout from "../public/images/webscout-frame.png";
 import Twitter from "../public/images/twitter.svg";
@@ -25,12 +27,14 @@ const Home: NextPage = () => {
     setMounted(true);
   }, []);
 
+  const getCurrentTheme = theme === "system" ? systemTheme : theme;
+
   const ResponsiveGridLayout = WidthProvider(Responsive);
 
   const layout = [
-    { i: "box-a", x: 0, y: 0, w: 2, h: 1.5 },
+    { i: "box-a", x: 0, y: 0, w: 2, h: 1 },
     { i: "box-b", x: 2, y: 0, w: 1, h: 1 },
-    { i: "box-c", x: 0, y: 1, w: 1, h: 1.5 },
+    { i: "box-c", x: 3, y: 0, w: 1, h: 1.5 },
     { i: "box-d", x: 1, y: 1, w: 1, h: 1 },
     { i: "box-e", x: 2, y: 1, w: 1, h: 1.5 },
     { i: "box-f", x: 0, y: 2, w: 1, h: 1 },
@@ -86,17 +90,18 @@ const Home: NextPage = () => {
         <NavBar />
 
         <main className="flex w-full flex-1 flex-col px-6 min-h-screen  text-black dark:text-white">
-          <div className="h-96">
+          {/* change height */}
+          <div className="h-96"> 
             <ResponsiveGridLayout
               layouts={layouts}
-              cols={{ lg: 3, md: 3, sm: 3, xs: 1, xxs: 1 }}
+              cols={{ lg: 4, md: 4, sm: 4, xs: 1, xxs: 1 }}
               rowHeight={300}
               margin={[20, 20]}
               breakpoints={{ lg: 1000, md: 996, sm: 768, xs: 480, xxs: 0 }}
             >
               <div
                 key="box-a"
-                className="bg-white dark:bg-minLightBlack rounded-md px-8 py-6"
+                className="bg-white dark:bg-minLightBlack/30 rounded-md px-8 py-6"
               >
                 <img
                   src={Memoji.src}
@@ -110,7 +115,7 @@ const Home: NextPage = () => {
               </div>
               <div
                 key="box-b"
-                className="bg-white dark:bg-minLightBlack rounded-md"
+                className="bg-white dark:bg-minLightBlack/30 rounded-md"
               >
                 <img
                   src={Profile.src}
@@ -120,17 +125,17 @@ const Home: NextPage = () => {
               </div>
               <div
                 key="box-c"
-                className="bg-white dark:bg-minLightBlack rounded-md"
+                className="bg-white dark:bg-minLightBlack/30 rounded-md"
               >
                 <img
-                  src={Moscolino.src}
-                  className="object-cover h-full rounded-md"
-                  alt="moscolino-project"
+                  src={Minlinks.src}
+                  className="rounded-md"
+                  alt="asoebi-project"
                 />
               </div>
               <div
                 key="box-d"
-                className="bg-white dark:bg-minLightBlack rounded-md flex justify-center items-center"
+                className="bg-white dark:bg-minLightBlack/30 rounded-md flex justify-center items-center"
                 // style={{
                 //   backgroundImage: `url(${Asoebi.src})`,
                 //   backgroundSize: "cover",
@@ -139,59 +144,69 @@ const Home: NextPage = () => {
 
                 // }}
               >
-                <img
-                  src={Twitter.src}
-                  className="object-cover h-[100px] w-[110px]  rounded-md"
-                  alt="twitter-logo"
-                />
+                {renderThemeChanger()}
               </div>
               <div
                 key="box-e"
-                className=" bg-white dark:bg-minLightBlack  rounded-md flex justify-center items-center"
+                className=" bg-[#6886C5] dark:bg-minLightBlack/30  rounded-md"
               >
                 <img
                   src={Asoebi.src}
-                  className="object-cover h-full rounded-md"
+                  className="rounded-md"
                   alt="asoebi-project"
                 />
               </div>
               <div
                 key="box-f"
-                className="bg-white dark:bg-minLightBlack rounded-md flex justify-center items-center"
+                className="bg-[#6886c5] dark:bg-minLightBlack/30 rounded-md flex justify-center items-center"
               >
-                <img
-                  src={LinkedIn.src}
-                  className="object-cover h-[100px] w-[110px]  rounded-md"
-                  alt="linkedin-logo"
-                />
+                {getCurrentTheme === "dark" ? (
+                  <svg
+                    className="linkedin-icon h-[100px] w-[110px]"
+                    width="75.121"
+                    height="61.052"
+                    viewBox="0 0 24 23"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.98 2.5C4.98 3.881 3.87 5 2.5 5C1.13 5 0.02 3.881 0.02 2.5C0.02 1.12 1.13 0 2.5 0C3.87 0 4.98 1.12 4.98 2.5ZM5 7H0V23H5V7ZM12.982 7H8.014V23H12.983V14.601C12.983 9.931 19.012 9.549 19.012 14.601V23H24V12.869C24 4.989 15.078 5.276 12.982 9.155V7Z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                ) : (
+                  <svg
+                    className="linkedin-icon h-[100px] w-[110px]"
+                    width="75.121"
+                    height="61.052"
+                    viewBox="0 0 24 23"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.98 2.5C4.98 3.881 3.87 5 2.5 5C1.13 5 0.02 3.881 0.02 2.5C0.02 1.12 1.13 0 2.5 0C3.87 0 4.98 1.12 4.98 2.5ZM5 7H0V23H5V7ZM12.982 7H8.014V23H12.983V14.601C12.983 9.931 19.012 9.549 19.012 14.601V23H24V12.869C24 4.989 15.078 5.276 12.982 9.155V7Z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                )}
               </div>
               <div
                 key="box-g"
-                className="bg-white dark:bg-minLightBlack rounded-md flex justify-center items-center"
-              >
-                spotify
-              </div>
+                className="bg-white dark:bg-minLightBlack/30 rounded-md flex justify-center items-center"
+              ></div>
               <div
                 key="box-h"
-                className="bg-white dark:bg-minLightBlack rounded-md flex items-center justify-center"
+                className="bg-white dark:bg-minLightBlack/30 rounded-md flex items-center justify-center"
               >
-                {/* <button
-                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                >
-                  toggle
-                </button> */}
-
-                {/* <DarkModeSwitch
-                  style={{ marginBottom: "2rem" }}
-                  checked={isDarkMode}
-                  onChange={toggleDarkMode}
-                  size={120}
-                /> */}
-                {renderThemeChanger()}
+                <img
+                  src={Airplay.src}
+                  className="rounded-md"
+                  alt="asoebi-project"
+                />
               </div>
               <div
                 key="box-i"
-                className="bg-white dark:bg-minLightBlack rounded-md flex justify-center items-center"
+                className="bg-[#6DD2B4] dark:bg-minLightBlack/30 rounded-md flex justify-center items-center"
               >
                 <img
                   src={Webscout.src}
@@ -201,7 +216,7 @@ const Home: NextPage = () => {
               </div>
               <div
                 key="box-j"
-                className="bg-white dark:bg-minLightBlack rounded-md flex justify-center items-center"
+                className="bg-white dark:bg-minLightBlack/30 rounded-md flex justify-center items-center"
               >
                 <img
                   src={Github.src}
@@ -211,7 +226,7 @@ const Home: NextPage = () => {
               </div>
               <div
                 key="box-k"
-                className="bg-white dark:bg-minLightBlack rounded-md flex justify-center items-center"
+                className="bg-white dark:bg-minLightBlack/30 rounded-md flex justify-center items-center"
               >
                 <img
                   src={Calendly.src}
@@ -221,9 +236,33 @@ const Home: NextPage = () => {
               </div>
               <div
                 key="box-l"
-                className="bg-white dark:bg-minLightBlack rounded-md"
+                className="bg-white dark:bg-minLightBlack/30 rounded-md flex justify-center items-center"
               >
-                I
+                {getCurrentTheme === "dark" ? (
+                  <svg
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    className="h-[100px] w-[110px]"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M32.72 13.328c.022.292.022.582.022.872 0 8.875-6.755 19.102-19.1 19.102a18.969 18.969 0 0 1-10.31-3.015c.54.061 1.06.083 1.622.083a13.45 13.45 0 0 0 8.335-2.868 6.727 6.727 0 0 1-6.279-4.655c.415.061.832.103 1.269.103.601 0 1.206-.083 1.768-.228a6.712 6.712 0 0 1-5.383-6.589v-.083c.895.498 1.933.81 3.033.852a6.704 6.704 0 0 1-2.993-5.59c0-1.247.331-2.39.913-3.387A19.096 19.096 0 0 0 19.46 14.95a7.623 7.623 0 0 1-.166-1.538 6.71 6.71 0 0 1 6.713-6.714c1.933 0 3.678.81 4.905 2.12a13.26 13.26 0 0 0 4.26-1.621 6.7 6.7 0 0 1-2.952 3.7 13.458 13.458 0 0 0 3.865-1.04 14.409 14.409 0 0 1-3.365 3.471Z"
+                      fill="#ffffff"
+                    ></path>
+                  </svg>
+                ) : (
+                  <svg
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    className="h-[100px] w-[110px]"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M32.72 13.328c.022.292.022.582.022.872 0 8.875-6.755 19.102-19.1 19.102a18.969 18.969 0 0 1-10.31-3.015c.54.061 1.06.083 1.622.083a13.45 13.45 0 0 0 8.335-2.868 6.727 6.727 0 0 1-6.279-4.655c.415.061.832.103 1.269.103.601 0 1.206-.083 1.768-.228a6.712 6.712 0 0 1-5.383-6.589v-.083c.895.498 1.933.81 3.033.852a6.704 6.704 0 0 1-2.993-5.59c0-1.247.331-2.39.913-3.387A19.096 19.096 0 0 0 19.46 14.95a7.623 7.623 0 0 1-.166-1.538 6.71 6.71 0 0 1 6.713-6.714c1.933 0 3.678.81 4.905 2.12a13.26 13.26 0 0 0 4.26-1.621 6.7 6.7 0 0 1-2.952 3.7 13.458 13.458 0 0 0 3.865-1.04 14.409 14.409 0 0 1-3.365 3.471Z"
+                      fill="#000000"
+                    ></path>
+                  </svg>
+                )}
               </div>
             </ResponsiveGridLayout>
           </div>
