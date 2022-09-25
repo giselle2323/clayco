@@ -22,6 +22,7 @@ import NavBar from "../components/Nav";
 const Home: NextPage = () => {
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
+  const [currentNav, setCurrentNav] = React.useState('all')
 
   React.useEffect(() => {
     setMounted(true);
@@ -34,23 +35,34 @@ const Home: NextPage = () => {
   const layout = [
     { i: "box-a", x: 0, y: 0, w: 2, h: 1 },
     { i: "box-b", x: 2, y: 0, w: 1, h: 1 },
-    { i: "box-c", x: 3, y: 0, w: 1, h: 1.5 },
-    { i: "box-d", x: 1, y: 1, w: 1, h: 1 },
-    { i: "box-e", x: 2, y: 1, w: 1, h: 1.5 },
-    { i: "box-f", x: 0, y: 2, w: 1, h: 1 },
-    { i: "box-g", x: 1, y: 2, w: 2, h: 1 },
-    { i: "box-h", x: 0, y: 3, w: 1, h: 1.5 },
-    { i: "box-i", x: 1, y: 3, w: 1, h: 1.5 },
-    { i: "box-j", x: 2, y: 4, w: 1, h: 1 },
-    { i: "box-k", x: 1, y: 4, w: 1, h: 0.45 },
-    { i: "box-l", x: 2, y: 4, w: 1, h: 1 },
+    { i: "box-c", x: 3, y: 0, w: 1, h: 2 },
+    { i: "box-d", x: 0, y: 1, w: 1, h: 1 },
+    { i: "box-e", x: 1, y: 1, w: 1, h: 1 },
+    { i: "box-f", x: 2, y: 1, w: 1, h: 2 },
+    { i: "box-g", x: 3, y: 1, w: 1, h: 1 },
+    { i: "box-h", x: 0, y: 2, w: 2, h: 1 },
+    { i: "box-i", x: 0, y: 3, w: 2, h: 1 },
+    { i: "box-j", x: 2, y: 3, w: 2, h: 1 },
+  ];
+
+  const layoutsm = [
+    { i: "box-a", x: 0, y: 0, w: 2, h: 1 },
+    { i: "box-b", x: 2, y: 0, w: 1, h: 1 },
+    { i: "box-c", x: 3, y: 0, w: 1, h: 2 },
+    { i: "box-d", x: 0, y: 1, w: 1, h: 1 },
+    { i: "box-e", x: 1, y: 1, w: 1, h: 1 },
+    { i: "box-f", x: 2, y: 1, w: 1, h: 2 },
+    { i: "box-g", x: 3, y: 1, w: 1, h: 1 },
+    { i: "box-h", x: 0, y: 2, w: 2, h: 1 },
+    { i: "box-i", x: 0, y: 3, w: 2, h: 1 },
+    { i: "box-j", x: 2, y: 3, w: 2, h: 1 },
   ];
 
   const layouts = {
     lg: layout,
     md: layout,
     // sm: layout,
-    // xs: layout,
+    xs: layoutsm,
     // xxs: layout
   };
 
@@ -91,17 +103,19 @@ const Home: NextPage = () => {
 
         <main className="flex w-full flex-1 flex-col px-6 min-h-screen  text-black dark:text-white">
           {/* change height */}
-          <div className="h-96"> 
+          <div className="h-96">
             <ResponsiveGridLayout
               layouts={layouts}
-              cols={{ lg: 4, md: 4, sm: 4, xs: 1, xxs: 1 }}
+              cols={{ lg: 4, md: 4, sm: 4, xs: 3, xxs: 1 }}
               rowHeight={300}
               margin={[20, 20]}
-              breakpoints={{ lg: 1000, md: 996, sm: 768, xs: 480, xxs: 0 }}
+              breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}
+              useCSSTransforms={false}
+              isResizable={false}
             >
               <div
                 key="box-a"
-                className="bg-white dark:bg-minLightBlack/30 rounded-md px-8 py-6"
+                className="bg-white dark:bg-minLightBlack/30 rounded-[32px] px-8 py-6"
               >
                 <img
                   src={Memoji.src}
@@ -115,17 +129,17 @@ const Home: NextPage = () => {
               </div>
               <div
                 key="box-b"
-                className="bg-white dark:bg-minLightBlack/30 rounded-md"
+                className="bg-white dark:bg-minLightBlack/30 rounded-[32px]"
               >
                 <img
                   src={Profile.src}
-                  className="object-cover h-full w-full rounded-md"
+                  className="object-cover h-full w-full rounded-[32px]"
                   alt="profile-picture"
                 />
               </div>
               <div
                 key="box-c"
-                className="bg-white dark:bg-minLightBlack/30 rounded-md"
+                className="bg-[#f1c283] dark:bg-minLightBlack/30 rounded-[32px] flex justify-center items-center"
               >
                 <img
                   src={Minlinks.src}
@@ -135,7 +149,7 @@ const Home: NextPage = () => {
               </div>
               <div
                 key="box-d"
-                className="bg-white dark:bg-minLightBlack/30 rounded-md flex justify-center items-center"
+                className="bg-white dark:bg-minLightBlack/30 rounded-[32px] flex justify-center items-center"
                 // style={{
                 //   backgroundImage: `url(${Asoebi.src})`,
                 //   backgroundSize: "cover",
@@ -148,17 +162,53 @@ const Home: NextPage = () => {
               </div>
               <div
                 key="box-e"
-                className=" bg-[#6886C5] dark:bg-minLightBlack/30  rounded-md"
+                className=" bg-[#6886C5] dark:bg-minLightBlack/30  rounded-[32px] flex justify-center items-center"
+              >
+
+{getCurrentTheme === "dark" ? (
+                  <svg
+                    className="linkedin-icon h-[100px] w-[110px]"
+                    width="75.121"
+                    height="61.052"
+                    viewBox="0 0 24 23"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.98 2.5C4.98 3.881 3.87 5 2.5 5C1.13 5 0.02 3.881 0.02 2.5C0.02 1.12 1.13 0 2.5 0C3.87 0 4.98 1.12 4.98 2.5ZM5 7H0V23H5V7ZM12.982 7H8.014V23H12.983V14.601C12.983 9.931 19.012 9.549 19.012 14.601V23H24V12.869C24 4.989 15.078 5.276 12.982 9.155V7Z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                ) : (
+                  <svg
+                    className="linkedin-icon h-[100px] w-[110px]"
+                    width="75.121"
+                    height="61.052"
+                    viewBox="0 0 24 23"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.98 2.5C4.98 3.881 3.87 5 2.5 5C1.13 5 0.02 3.881 0.02 2.5C0.02 1.12 1.13 0 2.5 0C3.87 0 4.98 1.12 4.98 2.5ZM5 7H0V23H5V7ZM12.982 7H8.014V23H12.983V14.601C12.983 9.931 19.012 9.549 19.012 14.601V23H24V12.869C24 4.989 15.078 5.276 12.982 9.155V7Z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                )}
+                
+              </div>
+              <div
+                key="box-f"
+                className="bg-[#6886c5] dark:bg-minLightBlack/30 rounded-[32px] flex justify-center items-center"
               >
                 <img
-                  src={Asoebi.src}
+                  src={Airplay.src}
                   className="rounded-md"
                   alt="asoebi-project"
                 />
               </div>
               <div
-                key="box-f"
-                className="bg-[#6886c5] dark:bg-minLightBlack/30 rounded-md flex justify-center items-center"
+                key="box-g"
+                className="bg-white dark:bg-minLightBlack/30 rounded-[32px] flex justify-center items-center"
               >
                 {getCurrentTheme === "dark" ? (
                   <svg
@@ -191,40 +241,37 @@ const Home: NextPage = () => {
                 )}
               </div>
               <div
-                key="box-g"
-                className="bg-white dark:bg-minLightBlack/30 rounded-md flex justify-center items-center"
-              ></div>
-              <div
                 key="box-h"
-                className="bg-white dark:bg-minLightBlack/30 rounded-md flex items-center justify-center"
-              >
-                <img
-                  src={Airplay.src}
-                  className="rounded-md"
-                  alt="asoebi-project"
-                />
-              </div>
-              <div
-                key="box-i"
-                className="bg-[#6DD2B4] dark:bg-minLightBlack/30 rounded-md flex justify-center items-center"
+                className="bg-white dark:bg-minLightBlack/30 rounded-[32px] flex items-center justify-center"
               >
                 <img
                   src={Webscout.src}
-                  className="object-cover h-full w-full  rounded-md"
+                  className="object-cover h-full w-full rounded-md"
                   alt="webscout-project"
                 />
               </div>
               <div
-                key="box-j"
-                className="bg-white dark:bg-minLightBlack/30 rounded-md flex justify-center items-center"
+                key="box-i"
+                className="bg-white dark:bg-minLightBlack/30 rounded-[32px] flex justify-center items-center"
               >
                 <img
                   src={Github.src}
                   className="object-cover h-[100px] w-[110px]  rounded-md"
                   alt="github-logo"
                 />
+                
               </div>
               <div
+                key="box-j"
+                className="bg-white dark:bg-minLightBlack/30 rounded-[32px] flex justify-center items-center"
+              >
+                <img
+                  src={Asoebi.src}
+                  className="rounded-md object-cover h-full w-full"
+                  alt="asoebi-project"
+                />
+              </div>
+              {/* <div
                 key="box-k"
                 className="bg-white dark:bg-minLightBlack/30 rounded-md flex justify-center items-center"
               >
@@ -263,7 +310,7 @@ const Home: NextPage = () => {
                     ></path>
                   </svg>
                 )}
-              </div>
+              </div> */}
             </ResponsiveGridLayout>
           </div>
         </main>
