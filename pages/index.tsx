@@ -22,7 +22,7 @@ import NavBar from "../components/Nav";
 const Home: NextPage = () => {
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
-  const [currentNav, setCurrentNav] = React.useState('all')
+  const [currentNav, setCurrentNav] = React.useState('all');
 
   React.useEffect(() => {
     setMounted(true);
@@ -30,39 +30,141 @@ const Home: NextPage = () => {
 
   const getCurrentTheme = theme === "system" ? systemTheme : theme;
 
+  console.log(currentNav);
+
   const ResponsiveGridLayout = WidthProvider(Responsive);
 
+  const allLayouts = {
+    all: {
+      layout: [
+        { i: "box-intro", x: 0, y: 0, w: 2, h: 1 },
+        { i: "box-img", x: 2, y: 0, w: 1, h: 1 },
+        { i: "box-proj-a", x: 3, y: 0, w: 1, h: 2 },
+        { i: "box-mode-toggle", x: 0, y: 1, w: 1, h: 1 },
+        { i: "box-linkedin", x: 1, y: 1, w: 1, h: 1 },
+        { i: "box-proj-b", x: 2, y: 1, w: 1, h: 2 },
+        { i: "box-twitter", x: 3, y: 1, w: 1, h: 1 },
+        { i: "box-proj-c", x: 0, y: 2, w: 2, h: 1 },
+        { i: "box-note", x: 0, y: 3, w: 2, h: 1 },
+        { i: "box-proj-d", x: 2, y: 3, w: 2, h: 1 },
+      ],
+      layoutsm: [
+        { i: "box-intro", x: 0, y: 0, w: 2, h: 1 },
+        { i: "box-img", x: 2, y: 0, w: 1, h: 1 },
+        { i: "box-proj-a", x: 3, y: 0, w: 1, h: 2 },
+        { i: "box-mode-toggle", x: 0, y: 1, w: 1, h: 1 },
+        { i: "box-linkedin", x: 1, y: 1, w: 1, h: 1 },
+        { i: "box-proj-b", x: 2, y: 1, w: 1, h: 2 },
+        { i: "box-twitter", x: 3, y: 1, w: 1, h: 1 },
+        { i: "box-proj-c", x: 0, y: 2, w: 2, h: 1 },
+        { i: "box-note", x: 0, y: 3, w: 2, h: 1 },
+        { i: "box-proj-d", x: 2, y: 3, w: 2, h: 1 },
+      ],
+    },
+    work: {
+      layout: [
+        { i: "box-intro", x: 0, y: 0, w: 2, h: 1 },
+        { i: "box-img", x: 2, y: 0, w: 1, h: 1 },
+        { i: "box-proj-a", x: 3, y: 0, w: 1, h: 2 },
+        { i: "box-mode-toggle", x: 0, y: 1, w: 1, h: 1 },
+        { i: "box-linkedin", x: 1, y: 1, w: 1, h: 1 },
+        { i: "box-proj-b", x: 2, y: 1, w: 1, h: 2 },
+        { i: "box-twitter", x: 3, y: 1, w: 1, h: 1 },
+        { i: "box-proj-c", x: 0, y: 2, w: 2, h: 1 },
+        { i: "box-note", x: 0, y: 3, w: 2, h: 1 },
+        { i: "box-proj-d", x: 2, y: 3, w: 2, h: 1 },
+      ],
+      layoutsm: [
+        { i: "box-intro", x: 0, y: 0, w: 2, h: 1 },
+        { i: "box-img", x: 2, y: 0, w: 1, h: 1 },
+        { i: "box-proj-a", x: 3, y: 0, w: 1, h: 2 },
+        { i: "box-mode-toggle", x: 0, y: 1, w: 1, h: 1 },
+        { i: "box-linkedin", x: 1, y: 1, w: 1, h: 1 },
+        { i: "box-proj-b", x: 2, y: 1, w: 1, h: 2 },
+        { i: "box-twitter", x: 3, y: 1, w: 1, h: 1 },
+        { i: "box-proj-c", x: 0, y: 2, w: 2, h: 1 },
+        { i: "box-note", x: 0, y: 3, w: 2, h: 1 },
+        { i: "box-proj-d", x: 2, y: 3, w: 2, h: 1 },
+      ],
+    },
+    about: {
+      layout: [
+        { i: "box-intro", x: 0, y: 0, w: 2, h: 1 },
+        { i: "box-img", x: 2, y: 0, w: 1, h: 1 },
+        { i: "box-proj-a", x: 3, y: 0, w: 1, h: 2 },
+        { i: "box-mode-toggle", x: 0, y: 1, w: 1, h: 1 },
+        { i: "box-linkedin", x: 1, y: 1, w: 1, h: 1 },
+        { i: "box-proj-b", x: 2, y: 1, w: 1, h: 2 },
+        { i: "box-twitter", x: 3, y: 1, w: 1, h: 1 },
+        { i: "box-proj-c", x: 0, y: 2, w: 2, h: 1 },
+        { i: "box-note", x: 0, y: 3, w: 2, h: 1 },
+        { i: "box-proj-d", x: 2, y: 3, w: 2, h: 1 },
+      ],
+      layoutsm: [
+        { i: "box-intro", x: 0, y: 0, w: 2, h: 1 },
+        { i: "box-img", x: 2, y: 0, w: 1, h: 1 },
+        { i: "box-proj-a", x: 3, y: 0, w: 1, h: 2 },
+        { i: "box-mode-toggle", x: 0, y: 1, w: 1, h: 1 },
+        { i: "box-linkedin", x: 1, y: 1, w: 1, h: 1 },
+        { i: "box-proj-b", x: 2, y: 1, w: 1, h: 2 },
+        { i: "box-twitter", x: 3, y: 1, w: 1, h: 1 },
+        { i: "box-proj-c", x: 0, y: 2, w: 2, h: 1 },
+        { i: "box-note", x: 0, y: 3, w: 2, h: 1 },
+        { i: "box-proj-d", x: 2, y: 3, w: 2, h: 1 },
+      ],
+    },
+  };
+
+  const getLayout = (nav: string) => {
+    let layout: Object;
+    switch (nav){
+      case 'all':
+         layout = allLayouts.all;
+         break;
+      case 'work':
+        layout = allLayouts.work;
+        break;
+      case 'about':
+        layout = allLayouts.about;
+        break;
+      default:
+        layout = allLayouts.all;;
+    }
+    return layout;
+  };
+  
+
   const layout = [
-    { i: "box-a", x: 0, y: 0, w: 2, h: 1 },
-    { i: "box-b", x: 2, y: 0, w: 1, h: 1 },
-    { i: "box-c", x: 3, y: 0, w: 1, h: 2 },
-    { i: "box-d", x: 0, y: 1, w: 1, h: 1 },
-    { i: "box-e", x: 1, y: 1, w: 1, h: 1 },
-    { i: "box-f", x: 2, y: 1, w: 1, h: 2 },
-    { i: "box-g", x: 3, y: 1, w: 1, h: 1 },
-    { i: "box-h", x: 0, y: 2, w: 2, h: 1 },
-    { i: "box-i", x: 0, y: 3, w: 2, h: 1 },
-    { i: "box-j", x: 2, y: 3, w: 2, h: 1 },
+    { i: "box-intro", x: 0, y: 0, w: 2, h: 1 },
+    { i: "box-img", x: 2, y: 0, w: 1, h: 1 },
+    { i: "box-proj-a", x: 3, y: 0, w: 1, h: 2 },
+    { i: "box-mode-toggle", x: 0, y: 1, w: 1, h: 1 },
+    { i: "box-linkedin", x: 1, y: 1, w: 1, h: 1 },
+    { i: "box-proj-b", x: 2, y: 1, w: 1, h: 2 },
+    { i: "box-twitter", x: 3, y: 1, w: 1, h: 1 },
+    { i: "box-proj-c", x: 0, y: 2, w: 2, h: 1 },
+    { i: "box-note", x: 0, y: 3, w: 2, h: 1 },
+    { i: "box-proj-d", x: 2, y: 3, w: 2, h: 1 },
   ];
 
   const layoutsm = [
-    { i: "box-a", x: 0, y: 0, w: 2, h: 1 },
-    { i: "box-b", x: 2, y: 0, w: 1, h: 1 },
-    { i: "box-c", x: 3, y: 0, w: 1, h: 2 },
-    { i: "box-d", x: 0, y: 1, w: 1, h: 1 },
-    { i: "box-e", x: 1, y: 1, w: 1, h: 1 },
-    { i: "box-f", x: 2, y: 1, w: 1, h: 2 },
-    { i: "box-g", x: 3, y: 1, w: 1, h: 1 },
-    { i: "box-h", x: 0, y: 2, w: 2, h: 1 },
-    { i: "box-i", x: 0, y: 3, w: 2, h: 1 },
-    { i: "box-j", x: 2, y: 3, w: 2, h: 1 },
+    { i: "box-intro", x: 0, y: 0, w: 2, h: 1 },
+    { i: "box-img", x: 2, y: 0, w: 1, h: 1 },
+    { i: "box-proj-a", x: 3, y: 0, w: 1, h: 2 },
+    { i: "box-mode-toggle", x: 0, y: 1, w: 1, h: 1 },
+    { i: "box-linkedin", x: 1, y: 1, w: 1, h: 1 },
+    { i: "box-proj-b", x: 2, y: 1, w: 1, h: 2 },
+    { i: "box-twitter", x: 3, y: 1, w: 1, h: 1 },
+    { i: "box-proj-c", x: 0, y: 2, w: 2, h: 1 },
+    { i: "box-note", x: 0, y: 3, w: 2, h: 1 },
+    { i: "box-proj-d", x: 2, y: 3, w: 2, h: 1 },
   ];
 
   const layouts = {
-    lg: layout,
-    md: layout,
+    lg: getLayout(currentNav).layout,
+    md: getLayout(currentNav).layout,
     // sm: layout,
-    xs: layoutsm,
+    xs: getLayout(currentNav).layoutsm
     // xxs: layout
   };
 
@@ -99,14 +201,14 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="min-container">
-        <NavBar />
+        <NavBar setCurrentNav={setCurrentNav} currentNav={currentNav} />
 
         <main className="flex w-full flex-1 flex-col px-6 min-h-screen  text-black dark:text-white">
           {/* change height */}
           <div className="h-96">
             <ResponsiveGridLayout
               layouts={layouts}
-              cols={{ lg: 4, md: 4, sm: 4, xs: 3, xxs: 1 }}
+              cols={{ lg: 4, md: 4, sm: 4, xs: 2, xxs: 1 }}
               rowHeight={300}
               margin={[20, 20]}
               breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}
@@ -114,8 +216,12 @@ const Home: NextPage = () => {
               isResizable={false}
             >
               <div
-                key="box-a"
-                className="bg-white dark:bg-minLightBlack/30 rounded-[32px] px-8 py-6"
+                key="box-intro"
+                className={`bg-white dark:bg-minLightBlack/30 rounded-[32px] px-8 py-6 ${
+                  currentNav === "all" || currentNav === "about"
+                    ? "opacity-100"
+                    : "opacity-25"
+                } `}
               >
                 <img
                   src={Memoji.src}
@@ -128,7 +234,7 @@ const Home: NextPage = () => {
                 </p>
               </div>
               <div
-                key="box-b"
+                key="box-img"
                 className="bg-white dark:bg-minLightBlack/30 rounded-[32px]"
               >
                 <img
@@ -138,7 +244,7 @@ const Home: NextPage = () => {
                 />
               </div>
               <div
-                key="box-c"
+                key="box-proj-a"
                 className="bg-[#f1c283] dark:bg-minLightBlack/30 rounded-[32px] flex justify-center items-center"
               >
                 <img
@@ -148,24 +254,16 @@ const Home: NextPage = () => {
                 />
               </div>
               <div
-                key="box-d"
+                key="box-mode-toggle"
                 className="bg-white dark:bg-minLightBlack/30 rounded-[32px] flex justify-center items-center"
-                // style={{
-                //   backgroundImage: `url(${Asoebi.src})`,
-                //   backgroundSize: "cover",
-                //   backgroundRepeat: "no-repeat",
-                //   backgroundPosition: "center",
-
-                // }}
               >
                 {renderThemeChanger()}
               </div>
               <div
-                key="box-e"
+                key="box-linkedin"
                 className=" bg-[#6886C5] dark:bg-minLightBlack/30  rounded-[32px] flex justify-center items-center"
               >
-
-{getCurrentTheme === "dark" ? (
+                {getCurrentTheme === "dark" ? (
                   <svg
                     className="linkedin-icon h-[100px] w-[110px]"
                     width="75.121"
@@ -194,10 +292,9 @@ const Home: NextPage = () => {
                     ></path>
                   </svg>
                 )}
-                
               </div>
               <div
-                key="box-f"
+                key="box-proj-b"
                 className="bg-[#6886c5] dark:bg-minLightBlack/30 rounded-[32px] flex justify-center items-center"
               >
                 <img
@@ -207,7 +304,7 @@ const Home: NextPage = () => {
                 />
               </div>
               <div
-                key="box-g"
+                key="box-twitter"
                 className="bg-white dark:bg-minLightBlack/30 rounded-[32px] flex justify-center items-center"
               >
                 {getCurrentTheme === "dark" ? (
@@ -241,7 +338,7 @@ const Home: NextPage = () => {
                 )}
               </div>
               <div
-                key="box-h"
+                key="box-proj-c"
                 className="bg-white dark:bg-minLightBlack/30 rounded-[32px] flex items-center justify-center"
               >
                 <img
@@ -251,7 +348,7 @@ const Home: NextPage = () => {
                 />
               </div>
               <div
-                key="box-i"
+                key="box-note"
                 className="bg-white dark:bg-minLightBlack/30 rounded-[32px] flex justify-center items-center"
               >
                 <img
@@ -259,10 +356,9 @@ const Home: NextPage = () => {
                   className="object-cover h-[100px] w-[110px]  rounded-md"
                   alt="github-logo"
                 />
-                
               </div>
               <div
-                key="box-j"
+                key="box-proj-d"
                 className="bg-white dark:bg-minLightBlack/30 rounded-[32px] flex justify-center items-center"
               >
                 <img

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-const NavBar = () => {
+const NavBar = ({setCurrentNav}) => {
   return (
     <nav className="p-6 flex flex-col lg:flex  items-center mb-11 gap-6">
       <svg
@@ -32,9 +32,9 @@ const NavBar = () => {
       </svg>
       <div className="bg-white dark:bg-minLightBlack/30 mx-auto rounded-[23px] p-[5px]">
         <ul className="flex items-center no-underline gap-2">
-          <li className="text-black dark:text-white hover:dark:bg-minBlack hover:bg-minLightBlack/30 rounded-[50px] px-4">Home</li>
-          <li className="text-black dark:text-white hover:dark:bg-minBlack hover:bg-minLightBlack/30 rounded-[50px] px-4">Work</li>
-          <li className="text-black dark:text-white hover:dark:bg-minBlack hover:bg-minLightBlack/30 rounded-[50px] px-4">About</li>
+          <li className="text-black dark:text-white hover:dark:bg-minBlack hover:bg-minLightBlack/30 rounded-[50px] px-4" onClick={() => setCurrentNav("all")}>Home</li>
+          <li className="text-black dark:text-white hover:dark:bg-minBlack hover:bg-minLightBlack/30 rounded-[50px] px-4" onClick={() => setCurrentNav("work")}>Work</li>
+          <li className="text-black dark:text-white hover:dark:bg-minBlack hover:bg-minLightBlack/30 rounded-[50px] px-4" onClick={() => setCurrentNav("about")}>About</li>
           {/* <li className="text-black dark:text-white hover:dark:bg-minBlack hover:bg-minLightBlack/30 rounded-[50px] px-4">Contact</li> */}
         </ul>
       </div>
