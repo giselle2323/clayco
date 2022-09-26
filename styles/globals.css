@@ -24,6 +24,23 @@
   margin: 0 auto;
 }
 
+
+.arrow-link:hover {
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-out 0s;
+  box-shadow: rgb(255 255 255) 0px 0px 0px 1px,
+    rgb(255 255 255 / 50%) 0px 0px 0px 6px;
+}
+
+.card span {
+  display: none;
+}
+
+
+.card:hover span {
+  display: block;
+}
+
 .switch {
   width: 100px;
   height: 52px;
