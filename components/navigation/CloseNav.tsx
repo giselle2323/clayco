@@ -34,7 +34,7 @@ const CloseNav: NextPage = () => {
                   y2="12.101"
                   transform="translate(7000.403 1744.351) rotate(45)"
                   fill="none"
-                  stroke="#ffffff"
+                  stroke="white"
                   stroke-linecap="round"
                   stroke-width="2"
                 ></line>
@@ -44,7 +44,7 @@ const CloseNav: NextPage = () => {
                   y2="12.101"
                   transform="translate(7000.144 1752.908) rotate(135)"
                   fill="none"
-                  stroke="#ffffff"
+                  stroke="white"
                   stroke-linecap="round"
                   stroke-width="2"
                 ></line>
@@ -74,7 +74,7 @@ const CloseNav: NextPage = () => {
                   y2="12.101"
                   transform="translate(7000.403 1744.351) rotate(45)"
                   fill="none"
-                  stroke="#0D1117"
+                  stroke="gray"
                   stroke-linecap="round"
                   stroke-width="2"
                 ></line>
@@ -84,7 +84,7 @@ const CloseNav: NextPage = () => {
                   y2="12.101"
                   transform="translate(7000.144 1752.908) rotate(135)"
                   fill="none"
-                  stroke="#0D1117"
+                  stroke="gray"
                   stroke-linecap="round"
                   stroke-width="2"
                 ></line>
