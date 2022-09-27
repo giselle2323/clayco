@@ -210,6 +210,7 @@ const Home: NextPage = () => {
               margin={[20, 20]}
               breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}
               useCSSTransforms
+              isDraggable={false}
               isResizable={false}
             >
               <div
