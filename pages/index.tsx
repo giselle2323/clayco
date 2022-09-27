@@ -202,18 +202,18 @@ const Home: NextPage = () => {
         canonical="https://minna.digital"
         openGraph={{
           url: "https://minna.digital",
-          title: "Aminat Yakubu Portfolio",
-          description: "Aminat is a frontend engineer crafting beautiful user experiences.",
+          title: "Aminat Yakubu",
+          description: "Aminat is a frontend engineer crafting digital user experiences on the web.",
           images: [
             {
-              url: "https://amita.vercel.app/_next/static/media/profile.49a5c0dd.jpeg",
-              width: 800,
-              height: 600,
+              url: "https://minna.digital/_next/static/media/profile-three.adc7231a.jpeg",
+              width: 400,
+              height: 400,
               alt: "Minna Profile Img",
               type: "image/jpeg",
             },
           ],
-          site_name: "SiteName",
+          site_name: "Aminat Yakubu",
         }}
       />
       <div className="min-container">
