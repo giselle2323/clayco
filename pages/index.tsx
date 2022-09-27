@@ -200,7 +200,7 @@ const Home: NextPage = () => {
       <div className="min-container">
         <NavBar setCurrentNav={setCurrentNav} currentNav={currentNav} />
 
-        <main className="flex w-full flex-1 flex-col min-h-screen md:px-6  text-black dark:text-white">
+        <main className="flex w-full flex-1 flex-col min-h-screen md:px-6  text-black dark:text-white grid-container">
           {/* change height */}
           <div className="h-full">
             <ResponsiveGridLayout
@@ -209,7 +209,7 @@ const Home: NextPage = () => {
               rowHeight={300}
               margin={[20, 20]}
               breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}
-              useCSSTransforms
+              useCSSTransforms={false}
               isDraggable={false}
               isResizable={false}
             >
