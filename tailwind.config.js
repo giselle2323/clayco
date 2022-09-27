@@ -6,12 +6,19 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    typography: (theme) => ({}),
     extend: {
       colors: {
         brandGrey: "#F9F9F9",
-        minBlack: "#030303",
+        minBlack: "#131419",
+        minLightBlack: "#292929",
+        // minLightBlack: "#101010",
+        offWhite: "#f7f2f2"
       },
     },
+    fontFamily: {
+      cabinet: ['Cabinet Grotesk', 'sans-serif']
+    }
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };
