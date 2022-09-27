@@ -10,8 +10,7 @@ import Asoebi from "../public/images/asoebi-frame.png";
 import Airplay from "../public/images/airplay-frame.png";
 import Minlinks from "../public/images/minlinks-frame.png";
 import Webscout from "../public/images/webscout-frame.png";
-import Profile from "../public/images/profile.jpeg";
-import Github from "../public/images/github.svg";
+import Profile from "../public/images/profile.jpg";
 import Arrow from "../public/images/arrow.svg";
 
 import NavBar from "../components/Nav";
