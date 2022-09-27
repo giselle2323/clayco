@@ -35,6 +35,8 @@ const Airplay: NextPage = () => {
           Effects. It was an energising creative outlet that, a decade later,
           would lay the foundation for a career rooted in design.
         </p>
+
+        <h3 className="text-2xl font-medium text-black dark:text-[#f0f2f8] py-6">Purpose and Goal.</h3>
         <p className="text-lg text-black dark:text-[#f0f2f8] py-8">
           Growing up, I used computers for designing. I remember feeling
           overwhelmed, staring at the interface of a freshly-torrented copy of
