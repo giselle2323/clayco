@@ -1,7 +1,9 @@
 import * as React from "react";
 import type { NextPage } from "next";
 import CloseNav from "../../components/navigation/CloseNav";
-import MinlinksHome from "../../public/images/minlinks-home.png"
+import MinlinksHome from "../../public/images/minlinks-home.png";
+import MinlinksDash from "../../public/images/minlinks-dash.png";
+import MinlinksPost from "../../public/images/minlinks-post.png";
 const Minlinks: NextPage = () => {
   return (
     <div className="container mx-auto p-8 text-black dark:text-[#f0f2f8]">
@@ -48,7 +50,17 @@ const Minlinks: NextPage = () => {
           would lay the foundation for a career rooted in design.
         </p>
 
-        <img src={MinlinksHome.src} alt="minlinks-homepage" />
+        <div className="flex gap-2">
+          <div className="flex-1 min-h-full">
+            <img src={MinlinksHome.src} alt="minlinks-homepage" className="hover:scale-150  rounded-sm" />
+          </div>
+          <div className="flex flex-col flex-1 gap-2">
+            <img src={MinlinksDash.src} alt="minlinks-homepage" className="hover:scale-150 rounded-sm"/>
+            <img src={MinlinksPost.src} alt="minlinks-homepage" className="hover:scale-150 rounded-sm" />
+          </div>
+         
+        </div>
+        <p className="italic text-center text-gray-500 py-4">(Hover images to scale)</p>
 
         <h3 className="text-2xl font-bold text-black dark:text-[#f0f2f8] pt-6">
           Purpose and Goal.
