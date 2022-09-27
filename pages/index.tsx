@@ -10,12 +10,10 @@ import Asoebi from "../public/images/asoebi-frame.png";
 import Airplay from "../public/images/airplay-frame.png";
 import Minlinks from "../public/images/minlinks-frame.png";
 import Webscout from "../public/images/webscout-frame.png";
-import Profile from "../public/images/profile.jpeg";
+import Profile from "../public/images/profile-three.jpeg";
 import Arrow from "../public/images/arrow.svg";
 
 import NavBar from "../components/Nav";
-import { Layout } from "../types/layout";
-
 const Home: NextPage = () => {
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
@@ -209,7 +207,7 @@ const Home: NextPage = () => {
               rowHeight={300}
               margin={[20, 20]}
               breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}
-              useCSSTransforms={false}
+              useCSSTransforms={mounted}
               isDraggable={false}
               isResizable={false}
             >
@@ -261,8 +259,7 @@ const Home: NextPage = () => {
 
                 <a
                   className="rounded-full h-10 w-auto absolute bottom-7 bg-white border border-white left-7 flex items-center justify-center p-4 arrow-link gap-2"
-                  href="https://minlinks.vercel.app/"
-                  target="_blank"
+                  href="/projects/minlinks"
                 >
                   <span className="text-black">Minlinks</span>
                   <img
@@ -345,8 +342,7 @@ const Home: NextPage = () => {
 
                 <a
                   className="rounded-full h-10 w-auto absolute bottom-7 left-7 bg-white flex items-center justify-center p-4 arrow-link gap-2"
-                  href="https://airplayy.vercel.app/"
-                  target="_blank"
+                  href="/projects/airplay"
                 >
                   <span className="text-black">Airplay</span>
                   <img
@@ -417,8 +413,7 @@ const Home: NextPage = () => {
 
                 <a
                   className="rounded-full h-10 w-auto absolute bottom-7 left-7 flex items-center bg-white border border-[#ededed] justify-center p-4 arrow-link gap-2"
-                  href="https://webscout.vercel.app/"
-                  target="_blank"
+                  href="/projects/webscout"
                 >
                   <span className="text-black">Webscout</span>
                   <img
@@ -483,8 +478,7 @@ const Home: NextPage = () => {
                 />
                 <a
                   className="rounded-full h-10 w-auto absolute bottom-7 left-7 flex bg-white border border-[#ededed] items-center justify-center p-4 arrow-link gap-2"
-                  href="https://asoebi-quarters.com"
-                  target="_blank"
+                  href="/projects/asoebi"
                 >
                   <span className="text-black">Asoebi</span>
                   <img
