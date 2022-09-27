@@ -2,7 +2,7 @@ import * as React from "react";
 import { NavProps } from "../types/nav";
 const NavBar = ({ setCurrentNav, currentNav }: NavProps) => {
   return (
-    <nav className="py-6 px-10 flex flex-col md:flex-row items-center mb-11 gap-6">
+    <nav className="py-6 md:px-10 flex flex-col md:flex-row items-center mb-11 gap-6">
       <svg
         width="1446"
         height="391"

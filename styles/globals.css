@@ -22,8 +22,20 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  transition: all 500ms ease 0s !important;
 }
 
+
+.grid-container .react-grid-item {
+  transition: all 500ms ease 0s !important;
+  will-change: transform;
+}
+
+.min-container {
+  opacity: 1;
+  transform: none;
+  will-change: transform, opacity;
+}
 
 .arrow-link:hover {
   cursor: pointer;
@@ -32,10 +44,12 @@
     rgb(255 255 255 / 50%) 0px 0px 0px 6px;
 }
 
+.card {
+  overflow: hidden
+}
 .card span {
   display: none;
 }
-
 
 .card:hover span {
   display: block;
