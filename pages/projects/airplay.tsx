@@ -5,7 +5,7 @@ import AirplayDash from "../../public/images/airplay-dash.png";
 const Airplay: NextPage = () => {
 
   return (
-    <div className="container mx-auto p-8 text-black dark:text-[#f0f2f8]">
+    <div className="container mx-auto p-8 text-black dark:text-[#f0f2f8] font-cabinet">
       <CloseNav />
       <div className="py-20 max-w-[700px] mx-auto">
        <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
@@ -15,7 +15,7 @@ const Airplay: NextPage = () => {
             <a className="underline block" href="https://airplayy.vercel.app/">Visit Airplay</a>
        </div>
        <h3 className="text-2xl font-medium text-black dark:text-[#f0f2f8] py-6">
-          A public bookmark for resources I have found across the web.
+          A web application for finding cool spotify plalists across diffrent music genres.
         </h3>
 
         <div className="">

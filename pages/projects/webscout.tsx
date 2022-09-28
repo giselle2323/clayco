@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import type { NextPage } from "next";
 import CloseNav from "../../components/navigation/CloseNav";
 import Webscouthome from "../../public/images/webscout-home.png";
@@ -7,7 +8,7 @@ import WebscoutDash from "../../public/images/webscout-dash.png";
 
 const Webscout: NextPage = () => {
   return (
-    <div className="container mx-auto p-8 text-black dark:text-[#f0f2f8]">
+    <div className="container mx-auto p-8 text-black dark:text-[#f0f2f8] font-cabinet">
       <CloseNav />
       <div className="py-20 max-w-[700px] mx-auto">
         <div className="flex flex-col md:flex-row gap-2 md:items-center justify-between">
@@ -19,7 +20,7 @@ const Webscout: NextPage = () => {
           </a>
         </div>
         <h3 className="text-2xl font-medium text-black dark:text-[#f0f2f8] py-6">
-          A public bookmark for resources I have found across the web.
+          A collection of free resources for web development.
         </h3>
 
         <div>

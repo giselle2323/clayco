@@ -4,7 +4,7 @@ import type { NextPage } from "next";
 import CloseNav from "../../components/navigation/CloseNav";
 const TechCareer: NextPage = () => {
   return (
-    <div className="container mx-auto p-8">
+    <div className="container mx-auto p-8 font-cabinet">
       <CloseNav />
       <div className="py-20 max-w-[700px] mx-auto">
         <h2 className="font-bold text-4xl text-black dark:text-[#f0f2f8] py-6 text-center">

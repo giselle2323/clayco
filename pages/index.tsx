@@ -191,7 +191,7 @@ const Home: NextPage = () => {
   };
 
   return (
-    <div className="min-h-screen cabinet">
+    <div className="min-h-screen font-cabinet">
       <Head>
         <title> Home Page </title>
         <link rel="icon" href="/favicon.ico" />
@@ -250,7 +250,7 @@ const Home: NextPage = () => {
                 </p>
 
                 <div className="mt-4">
-                <a href="/posts/aminat-bio" className="border border-[#30363d] px-4 py-1 rounded-md text-black dark:text-white">Learn More</a>
+                <a href="/posts/aminat-bio" className="border border-[#30363d] px-4 py-1 rounded-[30px] text-black dark:text-white">Learn More</a>
                 </div>
               </div>
               <div

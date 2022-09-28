@@ -6,7 +6,7 @@ import MinlinksDash from "../../public/images/minlinks-dash.png";
 import MinlinksPost from "../../public/images/minlinks-post.png";
 const Minlinks: NextPage = () => {
   return (
-    <div className="container mx-auto p-8 text-black dark:text-[#f0f2f8]">
+    <div className="container mx-auto p-8 text-black dark:text-[#f0f2f8] font-cabinet">
       <CloseNav />
       <div className="py-20 max-w-[700px] mx-auto">
         <div className="flex flex-col md:flex-row gap-2 md:items-center justify-between">

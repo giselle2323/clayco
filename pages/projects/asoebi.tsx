@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import type { NextPage } from "next";
 import CloseNav from "../../components/navigation/CloseNav";
 import AsoebiHome from "../../public/images/asoebi-home.png";
@@ -7,7 +8,7 @@ import AsoebiSectionB from "../../public/images/asoebi-section2.png";
 
 const AsoebiQuarters: NextPage = () => {
   return (
-    <div className="container mx-auto p-8 text-black dark:text-[#f0f2f8]">
+    <div className="container mx-auto p-8 text-black dark:text-[#f0f2f8] font-cabinet">
       <CloseNav />
       <div className="py-20 max-w-[700px] mx-auto">
         <div className="flex flex-col md:flex-row gap-2 md:items-center justify-between">
@@ -19,22 +20,19 @@ const AsoebiQuarters: NextPage = () => {
           </a>
         </div>
         <h3 className="text-2xl font-medium text-black dark:text-[#f0f2f8] py-6">
-          A public bookmark for resources I have found across the web.
+          A website for an African Fabrics small business.
         </h3>
 
         <div className="">
           <ul className="flex items-center flex-wrap gap-2">
           <li className="border dark:border-[#30363d] rounded-[30px] text-black dark:text-[#f0f2f8] px-4 mr-4">
-            Web Application
+            HTML
           </li>
           <li className="border dark:border-[#30363d] rounded-[30px] text-black dark:text-[#f0f2f8] px-4 mr-4">
-            React
+            CSS
           </li>
           <li className="border dark:border-[#30363d] rounded-[30px] text-black dark:text-[#f0f2f8] px-4 mr-4">
-            Typescript
-          </li>
-          <li className="border dark:border-[#30363d] rounded-[30px] text-black dark:text-[#f0f2f8] px-4 mr-4">
-            TailwindCSS
+            JavaScript
           </li>
           </ul>
         </div>
