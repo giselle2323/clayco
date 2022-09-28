@@ -10,7 +10,7 @@ const AsoebiQuarters: NextPage = () => {
     <div className="container mx-auto p-8 text-black dark:text-[#f0f2f8]">
       <CloseNav />
       <div className="py-20 max-w-[700px] mx-auto">
-        <div className="flex flex-col md:flex-row gap-2 items-center justify-between">
+        <div className="flex flex-col md:flex-row gap-2 md:items-center justify-between">
           <h2 className="font-bold text-3xl md:text-5xl text-black dark:text-[#f0f2f8]">
             Asoebi Quarters
           </h2>
