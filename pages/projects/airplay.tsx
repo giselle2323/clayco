@@ -91,7 +91,7 @@ const Airplay: NextPage = () => {
           that can be used query data from the database and this is what is in
           use currently. While developing I had challenges with the project
           structure and layout, I experienced  few challenges with using standard
-          types as the project was built in Typescript and also querying the database while applying certain filter using the Airtable's API.
+          types as the project was built in Typescript and also querying the database while applying certain filters using the Airtable's API.
         </p>
 
         <h3 className="text-2xl font-bold text-black dark:text-[#f0f2f8] pt-6">
