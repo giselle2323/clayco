@@ -6,34 +6,37 @@ import AsoebiSectionA from "../../public/images/asoebi-section1.png";
 import AsoebiSectionB from "../../public/images/asoebi-section2.png";
 
 const AsoebiQuarters: NextPage = () => {
-
   return (
     <div className="container mx-auto p-8 text-black dark:text-[#f0f2f8]">
       <CloseNav />
       <div className="py-20 max-w-[700px] mx-auto">
-       <div className="flex items-center justify-between">
-        <h2 className="font-bold text-5xl text-black dark:text-[#f0f2f8]">
+        <div className="flex flex-col md:flex-row gap-2 items-center justify-between">
+          <h2 className="font-bold text-3xl md:text-5xl text-black dark:text-[#f0f2f8]">
             Asoebi Quarters
-            </h2>
-            <a className="underline block" href="https://asoebi-quarters.com">Visit Asoebi Quarters</a>
-       </div>
-       <h3 className="text-2xl font-medium text-black dark:text-[#f0f2f8] py-6">
+          </h2>
+          <a className="underline block" href="https://asoebi-quarters.com">
+            Visit Asoebi Quarters
+          </a>
+        </div>
+        <h3 className="text-2xl font-medium text-black dark:text-[#f0f2f8] py-6">
           A public bookmark for resources I have found across the web.
         </h3>
 
-        <div className="flex items-center flex-wrap">
-          <p className="border dark:border-[#30363d] rounded-[30px] text-black dark:text-[#f0f2f8] px-4 mr-4">
+        <div className="">
+          <ul className="flex items-center flex-wrap gap-2">
+          <li className="border dark:border-[#30363d] rounded-[30px] text-black dark:text-[#f0f2f8] px-4 mr-4">
             Web Application
-          </p>
-          <p className="border dark:border-[#30363d] rounded-[30px] text-black dark:text-[#f0f2f8] px-4 mr-4">
+          </li>
+          <li className="border dark:border-[#30363d] rounded-[30px] text-black dark:text-[#f0f2f8] px-4 mr-4">
             React
-          </p>
-          <p className="border dark:border-[#30363d] rounded-[30px] text-black dark:text-[#f0f2f8] px-4 mr-4">
+          </li>
+          <li className="border dark:border-[#30363d] rounded-[30px] text-black dark:text-[#f0f2f8] px-4 mr-4">
             Typescript
-          </p>
-          <p className="border dark:border-[#30363d] rounded-[30px] text-black dark:text-[#f0f2f8] px-4 mr-4">
+          </li>
+          <li className="border dark:border-[#30363d] rounded-[30px] text-black dark:text-[#f0f2f8] px-4 mr-4">
             TailwindCSS
-          </p>
+          </li>
+          </ul>
         </div>
         <p className="text-lg text-black dark:text-[#f0f2f8] py-8">
           Growing up, I used computers for designing. I remember feeling
@@ -50,17 +53,30 @@ const AsoebiQuarters: NextPage = () => {
           would lay the foundation for a career rooted in design.
         </p>
 
-        <div className="flex gap-2">
+        <div className="flex flex-col md:flex-row gap-2">
           <div className="flex-1 min-h-full">
-            <img src={AsoebiHome.src} alt="minlinks-homepage" className="hover:scale-150  rounded-sm" />
+            <img
+              src={AsoebiHome.src}
+              alt="minlinks-homepage"
+              className="hover:scale-150  rounded-sm"
+            />
           </div>
           <div className="flex flex-col flex-1 gap-2">
-            <img src={AsoebiSectionA.src} alt="minlinks-homepage" className="hover:scale-150 rounded-sm"/>
-            <img src={AsoebiSectionB.src} alt="minlinks-homepage" className="hover:scale-150 rounded-sm" />
+            <img
+              src={AsoebiSectionA.src}
+              alt="minlinks-homepage"
+              className="hover:scale-150 rounded-sm"
+            />
+            <img
+              src={AsoebiSectionB.src}
+              alt="minlinks-homepage"
+              className="hover:scale-150 rounded-sm"
+            />
           </div>
-         
         </div>
-        <p className="italic text-center text-gray-500 py-4">(Hover images to scale)</p>
+        <p className="italic text-center text-gray-500 py-4">
+          (Hover images to scale)
+        </p>
 
         <h3 className="text-2xl font-bold text-black dark:text-[#f0f2f8] pt-6">
           Purpose and Goal.

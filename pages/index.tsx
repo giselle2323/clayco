@@ -496,7 +496,7 @@ const Home: NextPage = () => {
               >
                 <img
                   src={Asoebi.src}
-                  className="rounded-md w-full"
+                  className="rounded-md w-full h-full object-cover"
                   alt="asoebi-project"
                 />
                 <a

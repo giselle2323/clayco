@@ -8,8 +8,8 @@ const Airplay: NextPage = () => {
     <div className="container mx-auto p-8 text-black dark:text-[#f0f2f8]">
       <CloseNav />
       <div className="py-20 max-w-[700px] mx-auto">
-       <div className="flex items-center justify-between">
-        <h2 className="font-bold text-5xl text-black dark:text-[#f0f2f8]">
+       <div className="flex flex-col md:flex-row items-center justify-between gap-2">
+        <h2 className="font-bold text-3xl md:text-5xl text-black dark:text-[#f0f2f8]">
             Airplay
             </h2>
             <a className="underline block" href="https://airplayy.vercel.app/">Visit Airplay</a>
@@ -18,19 +18,21 @@ const Airplay: NextPage = () => {
           A public bookmark for resources I have found across the web.
         </h3>
 
-        <div className="flex items-center flex-wrap">
-          <p className="border dark:border-[#30363d] rounded-[30px] text-black dark:text-[#f0f2f8] px-4 mr-4">
+        <div className="">
+          <ul className="flex flex-wrap gap-2 ">
+          <li className="border dark:border-[#30363d] rounded-[30px] text-black dark:text-[#f0f2f8] px-4 mr-4">
             Web Application
-          </p>
-          <p className="border dark:border-[#30363d] rounded-[30px] text-black dark:text-[#f0f2f8] px-4 mr-4">
+          </li>
+          <li className="border dark:border-[#30363d] rounded-[30px] text-black dark:text-[#f0f2f8] px-4 mr-4">
             React
-          </p>
-          <p className="border dark:border-[#30363d] rounded-[30px] text-black dark:text-[#f0f2f8] px-4 mr-4">
+          </li>
+          <li className="border dark:border-[#30363d] rounded-[30px] text-black dark:text-[#f0f2f8] px-4 mr-4">
             Typescript
-          </p>
-          <p className="border dark:border-[#30363d] rounded-[30px] text-black dark:text-[#f0f2f8] px-4 mr-4">
+          </li>
+          <li className="border dark:border-[#30363d] rounded-[30px] text-black dark:text-[#f0f2f8] px-4 mr-4">
             TailwindCSS
-          </p>
+          </li>
+          </ul>
         </div>
         <p className="text-lg text-black dark:text-[#f0f2f8] py-8">
           Growing up, I used computers for designing. I remember feeling
