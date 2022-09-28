@@ -8,7 +8,7 @@ const Airplay: NextPage = () => {
     <div className="container mx-auto p-8 text-black dark:text-[#f0f2f8]">
       <CloseNav />
       <div className="py-20 max-w-[700px] mx-auto">
-       <div className="flex flex-col md:flex-row items-center justify-between gap-2">
+       <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
         <h2 className="font-bold text-3xl md:text-5xl text-black dark:text-[#f0f2f8]">
             Airplay
             </h2>
