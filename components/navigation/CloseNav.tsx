@@ -36,7 +36,7 @@ const CloseNav: NextPage = () => {
                   fill="none"
                   stroke="white"
                   stroke-linecap="round"
-                  stroke-width="2"
+                  strokeWidth="2"
                 ></line>
                 <line
                   id="Line_7"
@@ -46,7 +46,7 @@ const CloseNav: NextPage = () => {
                   fill="none"
                   stroke="white"
                   stroke-linecap="round"
-                  stroke-width="2"
+                  strokeWidth="2"
                 ></line>
               </g>
             </g>
@@ -76,7 +76,7 @@ const CloseNav: NextPage = () => {
                   fill="none"
                   stroke="gray"
                   stroke-linecap="round"
-                  stroke-width="2"
+                  strokeWidth="2"
                 ></line>
                 <line
                   id="Line_7"
@@ -86,7 +86,7 @@ const CloseNav: NextPage = () => {
                   fill="none"
                   stroke="gray"
                   stroke-linecap="round"
-                  stroke-width="2"
+                  strokeWidth="2"
                 ></line>
               </g>
             </g>

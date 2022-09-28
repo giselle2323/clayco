@@ -18,7 +18,7 @@ const Airplay: NextPage = () => {
           A public bookmark for resources I have found across the web.
         </h3>
 
-        <div className="flex items-center">
+        <div className="flex items-center flex-wrap">
           <p className="border dark:border-[#30363d] rounded-[30px] text-black dark:text-[#f0f2f8] px-4 mr-4">
             Web Application
           </p>
