@@ -17,7 +17,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      cabinet: ['Cabinet Grotesk', 'sans-serif']
+      cabinet: ['Cabinet Grotesk', 'sans-serif'],
+      inter: ['Inter', 'sans-serif']
     }
   },
   plugins: [require('@tailwindcss/typography')],

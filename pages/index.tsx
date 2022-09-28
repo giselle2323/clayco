@@ -191,7 +191,7 @@ const Home: NextPage = () => {
   };
 
   return (
-    <div className="min-h-screen cabinet">
+    <div className="min-h-screen font-cabinet">
       <Head>
         <title> Home Page </title>
         <link rel="icon" href="/favicon.ico" />
@@ -234,7 +234,7 @@ const Home: NextPage = () => {
             >
               <div
                 key="box-intro"
-                className={`bg-white dark:bg-minLightBlack/30 dark:border dark:border-[#21262c] rounded-[32px] px-8 py-6 ${
+                className={`bg-white dark:bg-minLightBlack/30 dark:border dark:border-[#21262c] rounded-[32px] px-8 ${
                   currentNav === "all" || currentNav === "about"
                     ? "opacity-100"
                     : "opacity-25"
@@ -243,12 +243,15 @@ const Home: NextPage = () => {
                 <img
                   src={Memoji.src}
                   alt="memoji"
-                  className=" h-[107px] my-6"
+                  className=" h-[90px] my-4"
                 />
                 <p className="max-w-[477px]">
-                  I'm Aminat, a Frontend Engineer focused on building web
-                  applications with React, React Native.
+                 Aminat is a Frontend Engineer with over 3 years of experience building beautiful digital products on the web. Throughout my career, I have worked with small businesses and startups to develop useful digital products centered on solving problems in the health and ecommerce sectors. 
                 </p>
+
+                <div className="mt-4">
+                <a href="/posts/aminat-bio" className="border border-[#30363d] px-4 py-1 rounded-[30px] text-black dark:text-white">Learn More</a>
+                </div>
               </div>
               <div
                 key="box-img"
