@@ -243,11 +243,15 @@ const Home: NextPage = () => {
                 <img
                   src={Memoji.src}
                   alt="memoji"
-                  className=" h-[107px] my-6"
+                  className=" h-[90px] my-4"
                 />
                 <p className="max-w-[477px]">
                  Aminat is a Frontend Engineer with over 3 years of experience building beautiful digital products on the web. Throughout my career, I have worked with small businesses and startups to develop useful digital products centered on solving problems in the health and ecommerce sectors. 
                 </p>
+
+                <div className="mt-4">
+                <a href="/posts/aminat-bio" className="border border-[#30363d] px-4 py-1 rounded-md text-black dark:text-white">Learn More</a>
+                </div>
               </div>
               <div
                 key="box-img"
