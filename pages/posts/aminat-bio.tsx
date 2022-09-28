@@ -32,9 +32,9 @@ const TechCareer: NextPage = () => {
           My formal work experience started in February, 2019 where I got an
           intern position at a health startup in Nigeria.
           <ol className="text-lg text-black dark:text-[#f0f2f8] py-4 list-disc px-6">
-            <li>RelianceHMO - February, 2019 - April, 2022</li>
-            <li>Norm Thormas Agency - April, 2022 - August, 2022</li>
-            <li>Mosol Agency - April, 2022 - present.</li>
+            <li>RelianceHMO - February, 2019 - May, 2022</li>
+            <li>Norm Thormas Agency - May, 2022 - August, 2022</li>
+            <li>Mosol Agency - May, 2022 - present.</li>
           </ol>
         </p>
         <h3 className="text-2xl font-bold text-black dark:text-[#f0f2f8] py-4">
