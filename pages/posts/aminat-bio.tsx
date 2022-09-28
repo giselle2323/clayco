@@ -20,8 +20,7 @@ const TechCareer: NextPage = () => {
             Mosol Agency
           </a>
           , a web development agency based in Mexico focused on creating and
-          developing beautiful digital web experiences. My real programming
-          journey started in 2018 when I was in the final year of studying at
+          developing beautiful digital web experiences. My real programming journey started in 2018 when I was in the final year of studying at
           the University. I learnt programming by training myself and attending
           a 3 months bootcamp in 2018. I further intensified my learning through
           open-source contributions, documentations, and blog posts.
