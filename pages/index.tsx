@@ -234,7 +234,7 @@ const Home: NextPage = () => {
             >
               <div
                 key="box-intro"
-                className={`bg-white dark:bg-minLightBlack/30 dark:border dark:border-[#21262c] rounded-[32px] px-8 ${
+                className={`bg-white dark:bg-minLightBlack/30 dark:border dark:border-[#21262c] overflow-scroll rounded-[32px] px-8 ${
                   currentNav === "all" || currentNav === "about"
                     ? "opacity-100"
                     : "opacity-25"
@@ -516,6 +516,7 @@ const Home: NextPage = () => {
               </div>
             </ResponsiveGridLayout>
           </div>
+          <p className="font-base py-6 text-center">@2022 Aminat Yakubu - Inspired by <a className="text-red-300" href="https://nevflynn.com">nevflynn</a> </p>
         </main>
       </div>
     </div>
