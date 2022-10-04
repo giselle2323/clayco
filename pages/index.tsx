@@ -246,7 +246,8 @@ const Home: NextPage = () => {
                   className=" h-[90px] my-4"
                 />
                 <p className="max-w-[477px]">
-                 Aminat is a Frontend Engineer with over 3 years of experience building beautiful digital products on the web. Throughout my career, I have worked with small businesses and startups to develop useful digital products centered on solving problems in the health and ecommerce sectors. 
+                 Aminat is a Frontend Engineer with over 3 years of experience building beautiful digital products on the web. 
+                 I have worked with small businesses and startups to develop products centered on solving problems in the health and ecommerce sectors. 
                 </p>
 
                 <div className="mt-4">
