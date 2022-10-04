@@ -234,7 +234,7 @@ const Home: NextPage = () => {
             >
               <div
                 key="box-intro"
-                className={`bg-white dark:bg-minLightBlack/30 dark:border dark:border-[#21262c] overflow-scroll rounded-[32px] px-8 ${
+                className={`bg-white dark:bg-minLightBlack/30 dark:border h-[400px] md:h-auto dark:border-[#21262c] overflow-scroll rounded-[32px] px-8 ${
                   currentNav === "all" || currentNav === "about"
                     ? "opacity-100"
                     : "opacity-25"
