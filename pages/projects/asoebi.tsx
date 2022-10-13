@@ -72,13 +72,13 @@ const AsoebiQuarters: NextPage = () => {
           Purpose and Goal.
         </h3>
 
-        <p className="text-lg text-black dark:text-[#f0f2f8] py-8">
+        <div className="text-lg text-black dark:text-[#f0f2f8] py-8">
           This project was divided into two main phases.
           <ul className="px-4 list-disc">
             <li>The Design Phase</li>
             <li>The Development Phase</li>
           </ul>
-        </p>
+        </div>
 
         <h3 className="text-2xl font-bold text-black dark:text-[#f0f2f8] pt-6">
           Problems and Thought Process.

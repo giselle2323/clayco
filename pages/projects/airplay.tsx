@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import type { NextPage } from "next";
 import CloseNav from "../../components/navigation/CloseNav";
 import AirplayDash from "../../public/images/airplay-dash.png";
@@ -70,7 +71,7 @@ const Airplay: NextPage = () => {
           Goal
         </h3>
 
-        <p className="text-lg text-black dark:text-[#f0f2f8] py-8">
+        <div className="text-lg text-black dark:text-[#f0f2f8] py-8">
           This project was divided into two main development phases.
           <ul className="px-4 list-disc">
             <li>Developing a dashboard showing different playlists.</li>
@@ -79,7 +80,7 @@ const Airplay: NextPage = () => {
               mood.
             </li>
           </ul>
-        </p>
+        </div>
 
         <h3 className="text-2xl font-bold text-black dark:text-[#f0f2f8] pt-6">
           Problems and Thought Process.

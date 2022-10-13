@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import type { NextPage } from "next";
 import { useTheme } from "next-themes";
 
@@ -35,7 +36,7 @@ const CloseNav: NextPage = () => {
                   transform="translate(7000.403 1744.351) rotate(45)"
                   fill="none"
                   stroke="white"
-                  stroke-linecap="round"
+                  strokeLinecap ="round"
                   strokeWidth="2"
                 ></line>
                 <line
@@ -45,7 +46,7 @@ const CloseNav: NextPage = () => {
                   transform="translate(7000.144 1752.908) rotate(135)"
                   fill="none"
                   stroke="white"
-                  stroke-linecap="round"
+                  strokeLinecap ="round"
                   strokeWidth="2"
                 ></line>
               </g>
@@ -75,7 +76,7 @@ const CloseNav: NextPage = () => {
                   transform="translate(7000.403 1744.351) rotate(45)"
                   fill="none"
                   stroke="gray"
-                  stroke-linecap="round"
+                  strokeLinecap ="round"
                   strokeWidth="2"
                 ></line>
                 <line
@@ -85,7 +86,7 @@ const CloseNav: NextPage = () => {
                   transform="translate(7000.144 1752.908) rotate(135)"
                   fill="none"
                   stroke="gray"
-                  stroke-linecap="round"
+                  strokeLinecap ="round"
                   strokeWidth="2"
                 ></line>
               </g>

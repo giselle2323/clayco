@@ -89,7 +89,7 @@ const Webscout: NextPage = () => {
           Problems and Thought Process.
         </h3>
 
-        <p className="text-lg text-black dark:text-[#f0f2f8] py-8">
+        <div className="text-lg text-black dark:text-[#f0f2f8] py-8">
           To start developing this application, I used pen an paper to break the
           application into smaller features e.g
           <ul className="px-4 list-disc">
@@ -100,7 +100,7 @@ const Webscout: NextPage = () => {
           Persisting data in NextJS for component sharing the same layout and
           querying the database while applying certain filters using the
           Airtable's API.
-        </p>
+        </div>
 
         <h3 className="text-2xl font-bold text-black dark:text-[#f0f2f8] pt-6">
           Lessons Learned.
