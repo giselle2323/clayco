@@ -277,16 +277,16 @@ const Home: NextPage = () => {
                 }`}
               >
                 <img
-                  src={Minlinks.src}
+                  src={Airplay.src}
                   className="rounded-md"
-                  alt="asoebi-project"
+                  alt="airplay-project"
                 />
 
                 <a
                   className="rounded-full h-10 w-auto absolute bottom-7 bg-white border border-white left-7 flex items-center justify-center p-4 arrow-link gap-2"
-                  href="/projects/minlinks"
+                  href="/projects/airplay"
                 >
-                  <span className="text-black">Minlinks</span>
+                  <span className="text-black">Airplay</span>
                   <img
                     src={Arrow.src}
                     className="rounded-md"
@@ -360,20 +360,21 @@ const Home: NextPage = () => {
                 }`}
               >
                 <img
-                  src={Airplay.src}
+                 src={Minlinks.src}
                   className="rounded-md"
                   alt="asoebi-project"
                 />
 
                 <a
                   className="rounded-full h-10 w-auto absolute bottom-7 left-7 bg-white flex items-center justify-center p-4 arrow-link gap-2"
-                  href="/projects/airplay"
+                  href="/projects/minlinks"
+                 
                 >
-                  <span className="text-black">Airplay</span>
+                  <span className="text-black">Minlinks</span>
                   <img
                     src={Arrow.src}
                     className="rounded-md"
-                    alt="asoebi-project"
+                    alt="minlinks-project"
                   />
                 </a>
               </div>
